@@ -17,7 +17,7 @@
                  #+X86-64 "win64-libmpg123.dll"))
   (t (:default "mpg123")))
 
-(use-foreign-library libmpg123)
+#-fl-dynamic-load(use-foreign-library libmpg123)
 
 ;;; fmt123.h
 (defcenum enc
